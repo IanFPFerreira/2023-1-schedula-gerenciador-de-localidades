@@ -91,7 +91,9 @@
         "jest-sonar",
         {
           "outputDirectory": ".",
-          "outputName": "coverage.xml"
+          "outputName": "coverage.xml",
+          "reportedFilePath": "relative",
+          "relativeRootDir": "<rootDir>/../"
         }
       ]
     ]
