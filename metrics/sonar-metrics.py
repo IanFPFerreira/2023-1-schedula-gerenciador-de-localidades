@@ -26,8 +26,7 @@ def generate_metrics():
 
     # NAO RELE A MÃO NISSO AQUI
     repository_name = sys.argv[1]
-    brach_name = sys.argv[2]
-    repository_version = sys.argv[3]
+    repository_version = sys.argv[2]
     underlined_repo_name = repository_name[:16] + \
         repository_name[16:].replace('-', "_")
     url = f'{base_url}{repository_name}&metricKeys={",".join(metrics)}&ps=500'
@@ -36,7 +35,7 @@ def generate_metrics():
         date = datetime.now()
         date_padrao_hilmer = f"{date.month}-{date.day}-{date.year}-{date.hour}-{date.minute}-{date.second}"  # noqa 501
 
-        filename = f"{prefix}-{underlined_repo_name}-{date_padrao_hilmer}-{brach_name}-{repository_version}.json"  # noqa 501
+        filename = f"{prefix}-{underlined_repo_name}-{date_padrao_hilmer}-{repository_version}.json"  # noqa 501
         print(filename)
         with open(filename, "w") as file:
             json.dump(data, file)
