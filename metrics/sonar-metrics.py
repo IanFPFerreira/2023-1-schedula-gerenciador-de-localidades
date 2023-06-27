@@ -20,8 +20,6 @@ def generate_metrics():
         "test_failures",
         "test_execution_time",
         "security_rating",
-        "test_success_density",
-        "reliability_rating",
     ]
 
     # NAO RELE A MÃO NISSO AQUI
